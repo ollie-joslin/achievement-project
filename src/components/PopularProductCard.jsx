@@ -7,7 +7,7 @@ const PopularProductCard = ({
   link,
 }) => {
   return (
-    <div className="flex flex-1 flex-col w-full max-sm:w-full max-sm:justify-center max-sm:items-center">
+    <div className="flex flex-1 flex-col w-full max-lg:w-full max-lg:justify-center max-lg:items-center">
       <a
         href={link}
         className="w-[280px] h-[280px]"
@@ -15,7 +15,7 @@ const PopularProductCard = ({
         <img
           src={imgURL}
           alt={name}
-          className="w-[280px] h-[280px] cursor-pointer"
+          className="w-[280px] h-[280px] cursor-pointer rounded-3xl"
         />
       </a>
 

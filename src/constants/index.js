@@ -1,10 +1,10 @@
 import { facebook, instagram, shieldTick, support, truckFast, twitter } from "../assets/icons";
-import { bigShoe1, bigShoe2, bigShoe3, customer1, customer2, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3, fallout4, batmanArkhamKnight, eldenRing, destiny2 } from "../assets/images";
+import { bigShoe1, bigShoe2, bigShoe3, customer1, customer2, shoe4, shoe5, shoe6, shoe7, thumbnailShoe1, thumbnailShoe2, thumbnailShoe3, fallout4, batmanArkhamKnight, eldenRing, destiny2, blackOps3, skyrim } from "../assets/images";
 
 export const navLinks = [
-    { href: "#home", label: "Home" },
+    { href: "/", label: "Home" },
+    { href: "games", label: "Games" },
     { href: "#about-us", label: "About Us" },
-    { href: "#products", label: "Products" },
     { href: "#contact-us", label: "Contact Us" },
 ];
 
@@ -24,9 +24,9 @@ export const shoes = [
 ];
 
 export const statistics = [
-    { value: '1k+', label: 'Brands' },
-    { value: '500+', label: 'Shops' },
-    { value: '250k+', label: 'Customers' },
+    { value: '1k+', label: 'Guides' },
+    { value: '500+', label: 'Games' },
+    { value: '250k+', label: 'Achievements' },
 ];
 
 export const products = [
@@ -58,16 +58,16 @@ export const products = [
 
     },
     {
-        imgURL: destiny2,
-        name: "Kingdom Rush",
-        rating: "4.0",
+        imgURL: blackOps3,
+        name: "Call of Duty: Black Ops 3",
+        rating: "5.0",
         link:"/"
 
     },
     {
-        imgURL: destiny2,
-        name: "Destiny 2",
-        rating: "4.0",
+        imgURL: skyrim,
+        name: "The Elder Scrolls V: Skyrim",
+        rating: "5.0",
         link:"/"
 
     },
@@ -76,17 +76,17 @@ export const products = [
 export const services = [
     {
         imgURL: truckFast,
-        label: "Free shipping",
+        label: "Full Walkthroughs",
         subtext: "Enjoy seamless shopping with our complimentary shipping service."
     },
     {
         imgURL: shieldTick,
-        label: "Secure Payment",
+        label: "Easy Achievement Tracker",
         subtext: "Experience worry-free transactions with our secure payment options."
     },
     {
         imgURL: support,
-        label: "Love to help you",
+        label: "Guides for All",
         subtext: "Our dedicated team is here to assist you every step of the way."
     },
 ];
@@ -109,14 +109,14 @@ export const reviews = [
 
 export const footerLinks = [
     {
-        title: "Products",
+        title: "Achievements",
         links: [
-            { name: "Air Force 1", link: "/" },
-            { name: "Air Max 1", link: "/" },
-            { name: "Air Jordan 1", link: "/" },
-            { name: "Air Force 2", link: "/" },
-            { name: "Nike Waffle Racer", link: "/" },
-            { name: "Nike Cortez", link: "/" },
+            { name: "Xbox Games", link: "/" },
+            { name: "Playstation Games", link: "/" },
+            { name: "PC Games", link: "/" },
+            { name: "Mobile Games", link: "/" },
+            { name: "Nintendo Games", link: "/" },
+            { name: "Other Games", link: "/" },
         ],
     },
     {

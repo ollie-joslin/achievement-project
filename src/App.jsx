@@ -1,39 +1,15 @@
-import {
-  CustomerReviews,
-  Footer,
-  Hero,
-  Subscribe,
-  PopularProducts,
-  Services,
-  SpecialOffer,
-  SuperQuality,
-} from "./sections";
+import { Footer } from "./home-sections";
 import Nav from "./components/nav";
+import { Home, Games } from "./pages";
+import { Route, Routes } from "react-router-dom";
 const App = () => (
   <main className="relative">
     <Nav />
-    {/* These are the components for the App which are being rendered here */}
-    <section className="xl:padding-l wide:padding-r padding-b">
-      <Hero />
-    </section>
-    <section className="padding">
-      <PopularProducts />
-    </section>
-    <section className="padding">
-      <SuperQuality />
-    </section>
-    <section className="padding-x py-10">
-      <Services />
-    </section>
-    <section className="padding">
-      <SpecialOffer />
-    </section>
-    <section className="bg-pale-blue padding">
-      <CustomerReviews />
-    </section>
-    <section className="padding-x sm:py-32 py-16 w-full">
-      <Subscribe />
-    </section>
+    {/* Routing, adds multipage functionality*/}
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/games" element={<Games />} />
+    </Routes>
     <section className="bg-black padding-x padding-t pb-8">
       <Footer />
     </section>

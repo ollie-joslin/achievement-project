@@ -17,7 +17,7 @@ const SuperQuality = () => {
           <span className="text-coral-red">
             Quality{" "}
           </span>{" "}
-          Shoes
+          Guides
         </h2>
         <p className="mt-4 lg:max-w-lg info-text">
           Ensuring premium comfort and style, our
@@ -31,7 +31,7 @@ const SuperQuality = () => {
           ensures your satisfaction
         </p>
         <div className="mt-11">
-          <Button label="View details" />
+          <Button label="View Games" />
         </div>
       </div>
 

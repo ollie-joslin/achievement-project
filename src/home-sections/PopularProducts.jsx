@@ -29,7 +29,7 @@ const PopularProducts = () => {
           </span>{" "}
           Games
         </h2>
-        <p className="lg:max-w-lg mt-2 font-montserrat text-slate-gray text-lg">
+        <p className=":max-w-lg mt-2 font-montserrat text-slate-gray text-lg">
           See some of the most popular games right
           now. Our guides will show you how to get
           100% of all achievements.
@@ -37,8 +37,24 @@ const PopularProducts = () => {
       </div>
 
       <Swiper
-        spaceBetween={10}
-        slidesPerView={4}
+        spaceBetween={5}
+        slidesPerView={1}
+        breakpoints={{
+          // when window width is >= 640px
+          768: {
+            spaceBetween: 10,
+            slidesPerView: 2,
+          },
+          // when window width is >= 768px
+          1024: {
+            spaceBetween: 60,
+            slidesPerView: 3,
+          },
+          1536: {
+            spaceBetween: 60,
+            slidesPerView: 4,
+          },
+        }}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
@@ -46,6 +62,7 @@ const PopularProducts = () => {
         onSwiper={setSwiper}
         modules={[Autoplay]}
         className="mt-16 grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 sm:gap-6 gap-14"
+        //
       >
         {products.map((product) => (
           <SwiperSlide key={product.name}>

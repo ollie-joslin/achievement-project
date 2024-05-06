@@ -9,6 +9,8 @@ import fallout4 from './fallout-4.png'
 import batmanArkhamKnight from './batman-arkham-knight.png'
 import eldenRing from './elden-ring.png'
 import destiny2 from './destiny-2.png'
+import blackOps3 from './black-ops-3.png'
+import skyrim from './skyrim.png'
 
 import footerLogo from './footer-logo.svg'
 import headerLogo from './header-logo.svg'
@@ -53,5 +55,7 @@ export {
     fallout4,
     batmanArkhamKnight,
     eldenRing,
-    destiny2
+    destiny2,
+    blackOps3,
+    skyrim
 }
