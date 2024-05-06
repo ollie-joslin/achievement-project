@@ -1,4 +1,8 @@
-import { Link } from "react-router-dom";
+import {
+  Link,
+  useMatch,
+  useResolvedPath,
+} from "react-router-dom";
 import { headerLogo } from "../assets/images";
 import { hamburger } from "../assets/icons";
 import { navLinks } from "../constants";
@@ -18,14 +22,14 @@ const nav = () => {
         </Link>
         <ul className="flex-1 flex justify-center items-center gap-16 max-lg:hidden">
           {navLinks.map((item) => (
-            <li key={item.label}>
+            <CustomLink key={item.label}>
               <Link
                 to={item.href}
                 className="font-montserrat leading-normal text-lg text-slate-gray"
               >
                 {item.label}
               </Link>
-            </li>
+            </CustomLink>
           ))}
         </ul>
         {/* This Div tag hides and unhides the hamburger menu icon */}
@@ -41,5 +45,22 @@ const nav = () => {
     </header>
   );
 };
+
+function CustomLink({ to, children, ...props }) {
+  const resolvedPath = useResolvedPath(to);
+  const isActive = useMatch({
+    // Passing in an object containing the path URL and A boolean value, ensuring the entire path matches
+    path: resolvedPath.pathname,
+    end: true,
+  });
+  return (
+    // Below is an if statement which adds the CSS class active when the URL of the Link Matches the Current URL
+    <li className={isActive ? "active" : ""}>
+      <Link to={to} {...props}>
+        {children}
+      </Link>
+    </li>
+  );
+}
 
 export default nav;
